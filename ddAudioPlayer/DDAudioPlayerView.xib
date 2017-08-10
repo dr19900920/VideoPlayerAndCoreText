@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1JW-Ph-E3X" customClass="DDAudioPlayerView" customModule="summer_hill_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="253"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6C-ZS-nS4">
+                    <rect key="frame" x="173" y="167" width="30" height="30"/>
+                    <state key="normal" backgroundImage="ddaudioplayer_play.png"/>
+                    <state key="selected" backgroundImage="ddaudioplayer_pause.png"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kX3-Fg-X0V">
+                    <rect key="frame" x="10" y="116" width="46" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.81176470590000005" green="1" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOS-wz-iGW">
+                    <rect key="frame" x="319" y="116" width="46" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.81176470590000005" green="1" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GZw-fc-COI">
+                    <rect key="frame" x="66" y="126" width="243" height="2"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="Icd-TE-X4h"/>
+                    </constraints>
+                </progressView>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lS9-9s-Gcf" customClass="DDTimeSlider" customModule="summer_hill_ios" customModuleProvider="target">
+                    <rect key="frame" x="64" y="112" width="247" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="ZQo-Pd-zJO"/>
+                    </constraints>
+                </slider>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfT-pK-9JQ">
+                    <rect key="frame" x="255" y="173" width="25" height="18"/>
+                    <state key="normal" backgroundImage="ddaudioplayer_seek_to_image.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7y-uG-Rae">
+                    <rect key="frame" x="95" y="173" width="25" height="18"/>
+                    <state key="normal" backgroundImage="ddaudioplayer_seek_back_image.png"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypY-xm-uO6">
+                    <rect key="frame" x="171" y="66" width="33" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.81176470590000005" green="1" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.12493212670000001" green="0.87058823529999996" blue="0.20370171770000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="lS9-9s-Gcf" firstAttribute="top" secondItem="ypY-xm-uO6" secondAttribute="bottom" constant="25" id="2ts-dq-UfC"/>
+                <constraint firstItem="GZw-fc-COI" firstAttribute="centerY" secondItem="lS9-9s-Gcf" secondAttribute="centerY" id="5x9-1g-Ppy"/>
+                <constraint firstAttribute="trailing" secondItem="FOS-wz-iGW" secondAttribute="trailing" constant="10" id="8SK-5M-hIv"/>
+                <constraint firstItem="FOS-wz-iGW" firstAttribute="leading" secondItem="GZw-fc-COI" secondAttribute="trailing" constant="10" id="Kvv-8S-njj"/>
+                <constraint firstItem="kX3-Fg-X0V" firstAttribute="leading" secondItem="1JW-Ph-E3X" secondAttribute="leading" constant="10" id="Q02-P3-4xB"/>
+                <constraint firstItem="FOS-wz-iGW" firstAttribute="centerY" secondItem="1JW-Ph-E3X" secondAttribute="centerY" id="Qe4-WW-1S7"/>
+                <constraint firstItem="PfT-pK-9JQ" firstAttribute="centerX" secondItem="1JW-Ph-E3X" secondAttribute="centerX" constant="80" id="Scf-Qk-cyk"/>
+                <constraint firstItem="O6C-ZS-nS4" firstAttribute="centerX" secondItem="1JW-Ph-E3X" secondAttribute="centerX" id="UV4-HG-gJI"/>
+                <constraint firstItem="O6C-ZS-nS4" firstAttribute="centerY" secondItem="m7y-uG-Rae" secondAttribute="centerY" id="Vub-vu-uY0"/>
+                <constraint firstItem="O6C-ZS-nS4" firstAttribute="top" secondItem="lS9-9s-Gcf" secondAttribute="bottom" constant="25" id="emN-O9-Yka"/>
+                <constraint firstItem="GZw-fc-COI" firstAttribute="trailing" secondItem="lS9-9s-Gcf" secondAttribute="trailing" id="gHM-uO-K0V"/>
+                <constraint firstItem="GZw-fc-COI" firstAttribute="leading" secondItem="kX3-Fg-X0V" secondAttribute="trailing" constant="10" id="r9u-Ep-gOc"/>
+                <constraint firstItem="GZw-fc-COI" firstAttribute="centerY" secondItem="1JW-Ph-E3X" secondAttribute="centerY" id="rQq-bC-3h6"/>
+                <constraint firstItem="kX3-Fg-X0V" firstAttribute="centerY" secondItem="1JW-Ph-E3X" secondAttribute="centerY" id="rgH-By-wwU"/>
+                <constraint firstItem="m7y-uG-Rae" firstAttribute="centerX" secondItem="1JW-Ph-E3X" secondAttribute="centerX" constant="-80" id="spp-mq-Kdv"/>
+                <constraint firstItem="PfT-pK-9JQ" firstAttribute="centerY" secondItem="m7y-uG-Rae" secondAttribute="centerY" id="vrG-wf-IYL"/>
+                <constraint firstItem="GZw-fc-COI" firstAttribute="leading" secondItem="lS9-9s-Gcf" secondAttribute="leading" id="vtF-yR-3CA"/>
+                <constraint firstItem="ypY-xm-uO6" firstAttribute="centerX" secondItem="1JW-Ph-E3X" secondAttribute="centerX" id="x3U-VI-ncK"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="accelerateBtn" destination="PfT-pK-9JQ" id="EoO-a0-o1O"/>
+                <outlet property="currentTimeLabel" destination="kX3-Fg-X0V" id="mQE-Yh-AYi"/>
+                <outlet property="decelerateBtn" destination="m7y-uG-Rae" id="0U5-ei-00P"/>
+                <outlet property="playBtn" destination="O6C-ZS-nS4" id="FQh-Kn-Dm2"/>
+                <outlet property="progressView" destination="GZw-fc-COI" id="1XZ-M3-Qvm"/>
+                <outlet property="speedsLabel" destination="ypY-xm-uO6" id="11w-yn-fDg"/>
+                <outlet property="timeSlider" destination="lS9-9s-Gcf" id="T2D-Zu-g7O"/>
+                <outlet property="totalTimeLabel" destination="FOS-wz-iGW" id="wUL-JG-x2q"/>
+            </connections>
+            <point key="canvasLocation" x="39.5" y="-104.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ddaudioplayer_pause.png" width="30" height="30"/>
+        <image name="ddaudioplayer_play.png" width="30" height="30"/>
+        <image name="ddaudioplayer_seek_back_image.png" width="25" height="15"/>
+        <image name="ddaudioplayer_seek_to_image.png" width="25" height="15"/>
+    </resources>
+</document>
